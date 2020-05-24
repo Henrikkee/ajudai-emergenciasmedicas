@@ -1,0 +1,6 @@
+/* Adicionar classes de estilo que estarão disponíveis em todas as páginas */
+
+@font-face {
+    font-family: Holtwood;
+    src: url(../fonts/HoltwoodOneSC-Regular.ttf);
+}
