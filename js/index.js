@@ -11,10 +11,16 @@ function indexPage() {
   ];
   window.onload = () => {
     window.localStorage.setItem('dados', JSON.stringify(dados));
+    hospitalForm.onsubmit = () =>{
+      console.log('funciona');
+      return true;
+    }
   };
   let item = JSON.parse(window.localStorage.getItem('dados'));
   item.forEach((element) => {
     console.log(element.titulo);
   });
+
+
 }
 indexPage();

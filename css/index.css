@@ -1,125 +1,247 @@
 /* Adicionar classes de estilo que estarão disponíveis apenas na página inicial (index.html) */
 
 .header-top {
-    width: 100%;
-    height: 50px;
-    background: #EA3838;
+  width: 100%;
+  height: 50px;
+  background: #ea3838;
 }
 .main-header {
-    width: 100%;
-    height: 200px;
-    background: #FE4F4F;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  height: 200px;
+  background: #fe4f4f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-box {
-    max-width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 50px;
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px;
 }
 
 .logo-box img {
-    height: 70px;
+  height: 70px;
 }
 
 .logo-box h1 {
-    color: #fff;
-    margin-top: 10px;
+  color: #fff;
+  margin-top: 10px;
 }
 
 .search-input {
-    margin: 0 50px;
-   
+  margin: 0 50px;
 }
 
-.search-input  {
-    width: 300px;
-    height: 50px;
-    border-radius: 42px;
-    padding: 10px;
-    border: 2px solid #FFF;
-    background: #efcdcd;
+.search-input {
+  width: 300px;
+  height: 50px;
+  border-radius: 42px;
+  padding: 10px;
+  border: 2px solid #fff;
+  background: #efcdcd;
 }
 .hospitalInput {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search-input input {
-    border: none;
-    width: 90%;
-    outline: none;
-    margin-bottom: 5px;
+  border: none;
+  width: 90%;
+  outline: none;
+  margin-bottom: 5px;
 }
 .search-input button {
-    display: none;
+  display: none;
 }
 .search-input label {
-    display: flex;
-    width: 50px;
-    cursor: pointer;
+  display: flex;
+  width: 50px;
+  cursor: pointer;
 }
 
 .search-input label img {
-    max-width: 100%;
+  max-width: 100%;
 }
 .container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.search-problem  {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    
+.search-problem {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .search-problem-box {
-    margin-right: 45px;
-    margin-top: 15px;
-    width: 235px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #BCBCBC;
-    border-radius: 30px;
+  margin-right: 45px;
+  margin-top: 15px;
+  width: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bcbcbc;
+  border-radius: 30px;
 }
 .search-problem-box input {
-    width: 85%;
-    outline: none;
-    border: none;
-    padding: 0 5px;
+  width: 85%;
+  outline: none;
+  border: none;
+  padding: 0 5px;
 }
 
 .search-problem-box button {
-    display: none;
+  display: none;
 }
 
 .search-problem-box label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .search-problem-box label img {
-    width: 15px;
+  width: 15px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
+.main-content {
+  display: grid;
+  width: 100%;
+  height: 500px;
+  padding: 50px;
+  justify-content: center;
+  grid-template-columns: repeat(5, 250px);
+}
+
+.quizz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 165px;
+  background-color: #ea3838;
+  border-radius: 5px;
+}
+.quizz img {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.quizz span {
+  color: #eee;
+  font-size: 15px;
+  text-align: center;
+}
+
+.subject-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 165px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.subject-box img {
+  display: flex;
+  align-self: center;
+}
+.img-box1 {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #ffb7ff;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+.img-box2 {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #bfbbff;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+.img-box3 {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #F6C2A0;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+.img-box4 {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #97FFD8;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+.img-box5 {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #D4D2FF;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+.img-box6 {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #D2EAFF;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+.img-box7 {
     display: flex;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    font-size: 12px;
-    background: #FE4F4F;
-    color: #FFF;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #E2D2FF;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+.img-box8 {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #FFA2AF;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+.img-box9 {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #D2E7FF;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 12px;
+  background: #fe4f4f;
+  color: #fff;
 }
