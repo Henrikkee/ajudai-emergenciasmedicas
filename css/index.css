@@ -234,11 +234,8 @@
     margin-bottom: 25px;
 }
 a {
-  text-decoration: none;
   width: 165px;
   height: 165px;
-
-
 }
 a:hover {
   background-color: rgba(255, 0, 0, 0.2);
