@@ -115,6 +115,7 @@
   padding: 50px;
   justify-content: center;
   grid-template-columns: repeat(5, 250px);
+  margin-right: 30px;
 }
 
 .quizz {

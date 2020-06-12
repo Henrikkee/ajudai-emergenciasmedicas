@@ -1,4 +1,4 @@
-function indexPage() {
+window.onload = () => {
   const dados = [
     {
       titulo: 'Acidente de carro',
@@ -9,18 +9,10 @@ function indexPage() {
       img: 'img/justlogo.png',
     },
   ];
-  window.onload = () => {
-    window.localStorage.setItem('dados', JSON.stringify(dados));
-    hospitalForm.onsubmit = () =>{
-      console.log('funciona');
-      return true;
-    }
+
+  window.localStorage.setItem('dados', JSON.stringify(dados));
+
+  hospitalForm.onsubmit = () => {
+    return console.log('funciona');
   };
-  let item = JSON.parse(window.localStorage.getItem('dados'));
-  item.forEach((element) => {
-    console.log(element.titulo);
-  });
-
-
-}
-indexPage();
+};
