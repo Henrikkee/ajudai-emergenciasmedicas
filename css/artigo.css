@@ -1,1 +1,23 @@
 /* Adicionar classes de estilo que estarão disponíveis apenas na página de artigos */
+
+.article{
+    margin: 20px 100px;
+    padding: 10px 80px;
+    background: #f6f6f6;
+}
+
+.article-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.article-image {
+    border-radius: 20px;
+    margin-right: 20px;
+    float: left;
+}
+
+.article-paragraph p {
+    display: inline;
+}

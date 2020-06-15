@@ -1,6 +1,57 @@
 /* Adicionar classes de estilo que estarão disponíveis em todas as páginas */
 
 @font-face {
-    font-family: Holtwood;
-    src: url(../fonts/HoltwoodOneSC-Regular.ttf);
+  font-family: Holtwood;
+  src: url(../fonts/HoltwoodOneSC-Regular.ttf);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-top {
+    background: #ea3838;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .header-top img {
+    width: 45px;
+    margin: 20px 32px;
+  }
+  
+  .header-top h1 {
+    font-size: 20px;
+    color: #eee;
+    font-weight: bold;
+  }
+  
+  .header-botton {
+    background: #fe4f4f;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-botton img {
+    width: 25px;
+    margin: 20px 20px;
+  }
+  .header-botton span {
+    color: #eee;
+    font-size: 16px;
+  }
+
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 12px;
+  background: #fe4f4f;
+  color: #fff;
 }
