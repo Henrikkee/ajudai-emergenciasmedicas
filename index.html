@@ -20,19 +20,14 @@
           <h1>Ajuda Aí</h1>
         </div>
         <div class="search-input">
-          <form id="hospitalForm" class="hospitalInput" action="">
-            <input
-              id="hospital"
-              name="hospital"
-              type="text"
-              placeholder="Procurar hospital mais proximo"
-              style="background: #efcdcd;"
-            />
-            <button type="submit" id="submitButton"></button>
-            <label for="submitButton">
-              <img src="./img/icons/map.png" alt="Mapa"
-            /></label>
-          </form>
+          <div class="button-map">
+            <a href="mapa.html" class="text-muted text-normal">
+              Procurar hospital mais proximo
+              <label>
+                <img src="./img/icons/map.png" alt="Mapa"/>
+              </label>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -40,7 +35,7 @@
       <div class="row">
         <div class="search-problem">
           <div class="search-problem-box">
-            <input type="text" placeholder="Pesquisar" name="search" />
+            <input type="text" placeholder="Pesquisar" name="search" id="txtSearch" />
             <form action="">
               <button type="submit" id="submitButtonProblem"></button>
               <label for="submitButtonProblem">
@@ -70,6 +65,7 @@
       </div>
     </div>
     <footer>© 2019 Ajuda Aí - Todos os direitos reservados</footer>
+    <script src="js/db.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

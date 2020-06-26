@@ -33,6 +33,9 @@ header {
     display: flex;
     align-items: center;
   }
+  .header-botton a{
+    color: #eee;
+  }
   
   .header-botton img {
     width: 25px;
