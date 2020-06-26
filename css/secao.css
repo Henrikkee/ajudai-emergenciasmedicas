@@ -21,6 +21,10 @@
   margin: 30px 55px;
   border-radius: 50%;
 }
+.img-box-subject i {
+  color: white;
+  font-size: 1.3rem;
+}
 
 .subject-box {
   display: flex;

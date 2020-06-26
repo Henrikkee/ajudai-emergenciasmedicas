@@ -12,11 +12,13 @@ $(function() {
             secao = val.sections
             $("#lblSecaoTitle").text(title);
             $(".breadcrumb-current").text(title);
-            secao[0].articles.forEach(function(val) { 
+            $(".item-icon-title").addClass(icon);
+            secao.forEach(function(val) { 
+                console.log(val)
                 const randomElement = randomColors[Math.floor(Math.random() * randomColors.length)];
                 let item = $(".item-first").clone();
                 item.removeClass('d-none').removeClass('item-first').appendTo(".content-list");
-                item.find('.item-title').text(val.title);
+                item.find('.item-title').text(val.name);
                 item.find('a').attr("href",'artigo.html');
                 item.find('.item-icon').css('background', randomElement).addClass(icon);
             })
