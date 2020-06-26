@@ -12,7 +12,6 @@ $(function() {
             secao = val.sections
             $("#lblSecaoTitle").text(title);
             $(".breadcrumb-current").text(title);
-            console.log(secao[0])
             secao[0].articles.forEach(function(val) { 
                 const randomElement = randomColors[Math.floor(Math.random() * randomColors.length)];
                 let item = $(".item-first").clone();
