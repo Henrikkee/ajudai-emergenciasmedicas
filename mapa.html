@@ -12,116 +12,42 @@
   </head>
   <body>
     <header>
-        <div class="header-top">
+      <div class="header-top">
+        <a href="/">
           <img src="./img/justlogo.png" alt="Ajuda Aí logo" />
-          <h1>Ajuda Aí</h1>
-        </div>
-        <div class="header-botton">
-          <a href="index.html"><img src="./img/icons/casa.png" alt="Home" /></a>
-          <span>Inicio > Mapa</span>
-        </div>
-      </header>
-    <input
-      id="pac-input"
-      class="controls"
-      type="text"
-      placeholder="Search Box"
-    />
-    <div id="map"></div>
+          <h1 class="d-inline">Ajuda Aí</h1>
+        </a>
+      </div>
+      <div class="header-botton">
+        <a href="index.html" class="mt-1"><img src="./img/icons/casa.png" alt="Home" /> Inicio</a>
+        <span>&nbsp; > Mapa</span>
+      </div>
+    </header>
+    <div class="row mt-3">
+      <div class="col-lg-6 col-12">
+        <h5 class="text-center">Hospitais ou Centros de Saúde mais próximos: </h5>
+        <ul class="hospital-list">
+          <li>Não Encontrado</li>
+          <li>Não Encontrado</li>
+          <li>Não Encontrado</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-12">
+        <input
+          id="pac-input"
+          class="controls"
+          type="text"
+          placeholder="Search Box"
+        />
+        <div id="map"></div>
+      </div>
+    </div>
     <footer>© 2019 Ajuda Aí - Todos os direitos reservados</footer>
-    <script>
-      var map;
-      function showPosition(position) {
-        var lat = position.coords.latitude;
-        var lng = position.coords.longitude;
-        console.log(lat, lng)
-        map.setCenter(new google.maps.LatLng(lat, lng));
-      }
-      function getLocation() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-          alert("Geolocation is not supported by this browser.");
-        }
-      }
-      function initAutocomplete() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 5,
-          mapTypeId: 'roadmap',
-        });
-        getLocation();
-
-        // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function () {
-          searchBox.setBounds(map.getBounds());
-        });
-
-        var markers = [];
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener('places_changed', function () {
-          var places = searchBox.getPlaces();
-
-          if (places.length == 0) {
-            return;
-          }
-
-          // Clear out the old markers.
-          markers.forEach(function (marker) {
-            marker.setMap(null);
-          });
-          markers = [];
-
-          // For each place, get the icon, name and location.
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function (place) {
-            if (!place.geometry) {
-              console.log('Returned place contains no geometry');
-              return;
-            }
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25),
-            };
-
-            // Create a marker for each place.
-            markers.push(
-              new google.maps.Marker({
-                map: map,
-                icon: icon,
-                title: place.name,
-                position: place.geometry.location,
-              })
-            );
-
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
-        });
-      }
-    </script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB29mEnkJ1TCT7LBLwZ07fIqbR7rpL4L-Y&libraries=places&callback=initAutocomplete"
       async
       defer
     ></script>
-    <script>
-      $(function() {
-        getLocation();
-      });
-    </script>
+    <script src="js/map.js"></script>
   </body>
 </html>
