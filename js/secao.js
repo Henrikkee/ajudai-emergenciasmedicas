@@ -19,7 +19,7 @@ $(function() {
                 let item = $(".item-first").clone();
                 item.removeClass('d-none').removeClass('item-first').appendTo(".content-list");
                 item.find('.item-title').text(val.name);
-                item.find('a').attr("href",'artigo.html');
+                item.find('a').attr("href",'artigo.html?name=' + title + '&title='+val.name);
                 item.find('.item-icon').css('background', randomElement).addClass(icon);
             })
         }
