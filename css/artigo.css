@@ -1,8 +1,6 @@
 /* Adicionar classes de estilo que estarão disponíveis apenas na página de artigos */
 
 .article{
-    margin: 20px 100px;
-    padding: 10px 80px;
     background: #f6f6f6;
 }
 
