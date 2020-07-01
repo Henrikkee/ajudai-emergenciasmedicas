@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ajuda Aí</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
@@ -15,18 +15,25 @@
     <header>
       <div class="header-top"></div>
       <div class="main-header">
-        <div class="logo-box">
-          <img src="./img/justlogo.png" alt="Ajuda Aí logo" />
-          <h1>Ajuda Aí</h1>
-        </div>
-        <div class="search-input">
-          <div class="button-map">
-            <a href="mapa.html" class="text-muted text-normal">
-              Procurar hospital mais proximo
-              <label>
-                <img src="./img/icons/map.png" alt="Mapa"/>
-              </label>
-            </a>
+        <div class="row w-100">
+          <div class="col-12 col-lg-3">
+            <div class="logo-box">
+              <img src="./img/justlogo.png" alt="Ajuda Aí logo" />
+              <h1>Ajuda Aí</h1>
+            </div>
+          </div>
+          <div class="col-12 offset-lg-5 col-lg-4">
+            <br>
+            <div class="search-input float-right">
+              <div class="button-map">
+                <a href="mapa.html" class="text-muted text-normal">
+                  Procurar hospital mais proximo
+                  <label>
+                    <img src="./img/icons/map.png" alt="Mapa" />
+                  </label>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -35,7 +42,12 @@
       <div class="row">
         <div class="search-problem">
           <div class="search-problem-box">
-            <input type="text" placeholder="Pesquisar" name="search" id="txtSearch" />
+            <input
+              type="text"
+              placeholder="Pesquisar"
+              name="search"
+              id="txtSearch"
+            />
             <form action="">
               <button type="submit" id="submitButtonProblem"></button>
               <label for="submitButtonProblem">
@@ -47,7 +59,11 @@
       </div>
       <div class="row content-list">
         <div class="col-12 col-sm-6 col-lg-2 mt-4">
-          <a style="text-decoration: none;color: #3E3E3E;" class="link" href="">
+          <a
+            style="text-decoration: none; color: #3e3e3e;"
+            class="link"
+            href=""
+          >
             <div class="quizz">
               <img src="./img/icons/questionmark.png" alt="questionmark" />
               <span>Não sei o que fazer. O que eu faço?</span>

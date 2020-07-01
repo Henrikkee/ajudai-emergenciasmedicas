@@ -49,6 +49,10 @@ header {
     font-size: 16px;
   }
 
+.container, .container-fluid{
+  min-height: 69.4vh;
+}
+
 footer {
   position: relative;
   bottom: 0;
@@ -62,12 +66,12 @@ footer {
   color: #fff;
   margin-top: 100px;
 }
-
+/*
 @media only screen and (min-height: 680px) {
   footer {
-    margin-top: 230px;
+    margin-top: calc(52.55vh - 43px);
   }
-}
+}*/
 
 html,body {
   width: 100%;
