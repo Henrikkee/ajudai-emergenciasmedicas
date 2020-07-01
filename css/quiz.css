@@ -1,1 +1,55 @@
 /* Adicionar classes de estilo que estarão disponíveis apenas na página do quiz */
+
+.quiz-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.quiz-container ul{
+    padding: 0;
+    list-style: none;
+}
+
+.quiz-container ul li{
+    width: 100%;
+    border: 1px solid rgb(255, 173, 173);
+    border-radius: 3px;
+    padding: 20px 10px;
+    margin-top: 15px;
+}
+.quiz-container ul li:hover{
+    cursor: pointer;
+    background: rgb(255, 173, 173);
+}
+
+.quiz-image-doctor{
+    position: absolute;
+    width: 15%;
+    left: 5%;
+    bottom: 0%;
+}
+
+.quiz-helpMessage{
+    position: relative;
+    float: right;
+    padding: 10px;
+    background: #ececec;
+    height: 100px;
+    width: 150px;
+    border-radius: .4em;
+    text-align: center;
+}
+.quiz-helpMessage:after{
+    content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 43px solid transparent;
+	border-right-color: #ececec;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -21.5px;
+	margin-left: -43px;
+}

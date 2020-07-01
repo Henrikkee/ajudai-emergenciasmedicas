@@ -28,8 +28,5 @@ $(function() {
   $('#txtSearch').on('input',function(event){
     fillItems(event.target.value)
   });
-  $('.quizz').on('click',function(event){
-    alert('Não está pronto ainda :(')
-  });
 });
 

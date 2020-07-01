@@ -1,9 +1,12 @@
 var map;
 var infowindow;
+var myPos;
+var myMark;
 function showPosition(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;
     console.log(lat, lng)
+    myPos = {lat: lat, lng: lng};
     map.setCenter(new google.maps.LatLng(lat, lng));
 
     var pyrmont = new google.maps.LatLng(lat, lng);
@@ -13,6 +16,10 @@ function showPosition(position) {
         radius: 5000,
         types: ['hospital', 'health'] // this is where you set the map to get the hospitals and health related places
     };
+    myMark = new google.maps.Marker({
+        map: map,
+        position: pyrmont
+    });
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch(request, callback);
 }
@@ -24,6 +31,7 @@ function callback(results, status) {
             createMarker(results[i]);
         }
     } else console.log(status)
+    myMark.setMap(null);
 }
 function createMarker(place) {
     var placeLoc = place.geometry.location;
@@ -31,6 +39,7 @@ function createMarker(place) {
         map: map,
         position: place.geometry.location
     });
+    // console.log(haversine_distance(marker, myMark), place.name)
 
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.setContent(place.name);
@@ -62,11 +71,6 @@ function initAutocomplete() {
         searchBox.setBounds(map.getBounds());
     });
     getLocation();
-
-    //const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    // const url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyB29mEnkJ1TCT7LBLwZ07fIqbR7rpL4L-Y&types=hospital'; // site that doesn’t send Access-Control-*
-
-    //;
 
     var markers = [];
     // Listen for the event fired when the user selects a prediction and retrieve
@@ -118,6 +122,17 @@ function initAutocomplete() {
         });
         map.fitBounds(bounds);
     });
+}
+
+function haversine_distance(mk1, mk2) {
+    var R = 3958.8; // Radius of the Earth in miles
+    var rlat1 = mk1.position.lat() * (Math.PI/180); // Convert degrees to radians
+    var rlat2 = mk2.position.lat() * (Math.PI/180); // Convert degrees to radians
+    var difflat = rlat2-rlat1; // Radian difference (latitudes)
+    var difflon = (mk2.position.lng()-mk1.position.lng()) * (Math.PI/180); // Radian difference (longitudes)
+
+    var d = 2 * R * Math.asin(Math.sqrt(Math.sin(difflat/2)*Math.sin(difflat/2)+Math.cos(rlat1)*Math.cos(rlat2)*Math.sin(difflon/2)*Math.sin(difflon/2)));
+    return d;
 }
 $(function () {
     getLocation();
